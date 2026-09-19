@@ -49,6 +49,9 @@
 - P1-06 Task 3 moved to Review: added root Husky/lint-staged enforcement, Prettier for staged JSON/Markdown/YAML, ESLint for staged source files, and GitHub Actions quality checks.
 - P1-06 Task 3 verification: root hook passed on real staged files; `npm run check` passed with 5 test files/9 tests and production build; `npm run test:e2e` passed 1 Playwright test; `npx playwright install --with-deps chromium` exited 0; `git diff --check` passed.
 - Ruling: add a portable nvm fallback in the root hook because Git's hook environment omitted the interactive shell's Node PATH; the hook still fails clearly when no Node.js installation is available.
+- P1-06 Task 4 started: adding only `content-qc` and `student-flow-qa` repository skills plus the Codex operating playbook.
+- P1-06 Task 4 moved to Review: added `content-qc`, `student-flow-qa`, and `docs/codex-playbook.md` with content-rights, deterministic QA, accessibility, performance, and evidence boundaries.
+- P1-06 Task 4 verification: both skills passed `skill-creator/scripts/quick_validate.py`; Codex read-only discovery listed both repository skills and their triggers; placeholder scan and `git diff --check` passed.
 
 ## Update template
 
