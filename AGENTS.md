@@ -68,5 +68,8 @@
 - Lint
 - Unit tests
 - Relevant Playwright tests
+- For student-facing UI changes, browser-agent visual verification against the
+  approved mockup at mobile, tablet, and desktop viewports, in addition to
+  Playwright regression coverage
 - Production build when application structure changes
 - Relevant performance and accessibility checks before a release

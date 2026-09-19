@@ -20,6 +20,9 @@ existing unit and Playwright tests before adding coverage.
 - Run relevant Playwright tests at mobile and desktop viewports when the flow
   is user-facing; keep tests deterministic and use approved or clearly marked
   demo fixtures only.
+- Use the available browser agent to inspect the rendered UI at mobile,
+  tablet, and desktop viewports against the approved mockup. Record visual
+  mismatches separately from deterministic Playwright failures.
 - Verify the primary action, visible progress/state feedback, keyboard order,
   accessible names, responsive layout, and focus behavior.
 - Verify missing lesson and missing media states remain safe and useful.
