@@ -17,7 +17,7 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 | P2-02 | P0 | Build textbook and lesson navigation | Review | P2-01, P1-03 |
 | P2-03 | P0 | Build vocabulary learning | Backlog | P2-02 |
 | P2-04 | P0 | Build sentence-pattern learning | Backlog | P2-02 |
-| P2-05 | P0 | Build exercise engine | Backlog | P2-01 |
+| P2-05 | P0 | Build exercise engine | Done | P2-01 |
 | P2-06 | P0 | Build feedback and results | Backlog | P2-05 |
 | P3-01 | P0 | Persist student progress | Backlog | P2-06, P1-04 |
 | P3-02 | P0 | Implement review queue | Backlog | P3-01 |

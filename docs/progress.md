@@ -92,6 +92,14 @@
 - P1-06 completed: Codex project configuration, web quality command contract, root Husky/lint-staged hook, GitHub Actions workflow, two repository skills, playbook, and model/integration boundaries are committed.
 - P1-06 final verification: `npm run check` passed (lint, typecheck, 5 test files/9 tests, production build); `npm run test:e2e` passed 1 Playwright test; both skill validators passed; secret assignment scan found no credentials/provider configuration; `git diff --check` passed.
 - Next action: resolve P0-01 allowed-use evidence and P1-04 live Supabase/RLS setup before implementing the gated vertical slice in `docs/superpowers/plans/2026-09-19-learning-vertical-slice.md`.
+- P2-05 started: implementing only the framework-independent deterministic exercise schema/evaluator with demo-only tests; no textbook content, student route, or Supabase operation is introduced before the remaining gates.
+- Ruling: proceed with vertical-slice Task 2 despite P0-03/P1-04 gates because its contracts are pure domain code and the plan explicitly permits demo-fixture domain tests before pilot publication; cost if wrong: exercise interfaces may need a compatible adapter when approved pilot records are finalized.
+- P2-05 moved to Review: added a Zod-validated deterministic exercise contract for multiple choice, word order, fill-in-the-blank, and listening selection, with a pure evaluator and stable encouraging feedback.
+- P2-05 verification: focused RED check failed because the new modules did not exist; after implementation, focused tests passed (5 tests), then `npm run check` passed in `apps/web` (lint, typecheck, 11 test files/38 tests, production build).
+- P2-05 scope: no student-facing textbook record, UI, network access, randomization, clock, or Supabase dependency was added.
+- P2-05 self-review: added independent duplicate-option and out-of-range-index coverage, plus correct/incorrect listening-selection evaluation. No critical or important finding remains; reviewed locally because no independent reviewer tool is available in this session.
+- P2-05 completed: the deterministic exercise domain is committed after the final focused test and full quality gate passed.
+- Next action: obtain three completed human review records plus concrete approved media sources for P0-03, and provision a disposable Supabase project with two test users to unblock P1-04 live RLS verification; then resume the approved-pilot learning UI.
 
 ## Update template
 
