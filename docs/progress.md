@@ -100,6 +100,9 @@
 - P2-05 self-review: added independent duplicate-option and out-of-range-index coverage, plus correct/incorrect listening-selection evaluation. No critical or important finding remains; reviewed locally because no independent reviewer tool is available in this session.
 - P2-05 completed: the deterministic exercise domain is committed after the final focused test and full quality gate passed.
 - Next action: obtain three completed human review records plus concrete approved media sources for P0-03, and provision a disposable Supabase project with two test users to unblock P1-04 live RLS verification; then resume the approved-pilot learning UI.
+- P1-05 completed: the root instructions, roadmap, backlog, progress log, decision records, web-package instructions, and Codex playbook give a fresh session the current task, quality commands, blockers, and next action.
+- P1-05 verification: `codex exec -s read-only` reported P0-03 as current, `npm run check` and `npm run test:e2e` as required web checks, plus the P0-03 and P1-04 blockers, without modifying project files.
+- P1-05 ruling: complete this task after P1-01's implementation is available even while its backlog state remains Review, because P1-06 already established and verified the required tracking artifacts; cost if wrong: its status can be reopened without changing the workflow artifacts.
 
 ## Update template
 
