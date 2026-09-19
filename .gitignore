@@ -4,6 +4,9 @@ node_modules/
 coverage/
 playwright-report/
 test-results/
+tools/content-pipeline/.venv/
+tools/content-pipeline/build/
+tools/content-pipeline/*.egg-info/
 
 # Local configuration and generated files
 .env
