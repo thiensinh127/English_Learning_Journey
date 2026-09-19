@@ -2,7 +2,7 @@
 
 ## Current milestone
 
-M0 — Design approved; foundation plan is ready for review before execution.
+M1 — Textbook source identified; rights approval and pilot content are still in progress.
 
 ## Active implementation plan
 
@@ -10,15 +10,16 @@ M0 — Design approved; foundation plan is ready for review before execution.
 - `docs/superpowers/plans/2026-09-19-codex-workflow-and-quality-gates.md`
 - `docs/delivery-timeline.md`
 - `docs/agent-routing-policy.md`
-- The next plan, covering the student learning vertical slice, starts only after the exact textbook and pilot content are confirmed.
+- `docs/superpowers/plans/2026-09-19-learning-vertical-slice.md`
+- The vertical-slice plan is prepared from the confirmed Grade 4 Global Success scope; implementation waits for allowed-use evidence and live Supabase/RLS verification.
 
 ## Milestones
 
 | Milestone | Outcome | Status |
 |---|---|---|
 | M0 | Approved product and technical design | Done |
-| M1 | Textbook/content contract and pilot content ready | Not started |
-| M2 | Working application foundation | Not started |
+| M1 | Textbook/content contract and pilot content ready | In Progress |
+| M2 | Working application foundation | In Progress |
 | M3 | Student can learn and practice pilot lessons | Not started |
 | M4 | Progress, review queue, and motivation loop | Not started |
 | M5 | Validated deployment release | Not started |

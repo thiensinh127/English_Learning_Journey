@@ -19,6 +19,8 @@
 - P0-01 source identified by product owner: Tiếng Anh 4 Global Success, Học liệu.VN e-book ID `3`, page reference URL recorded in `docs/content-authoring.md`.
 - P0-01 metadata cross-check: public Học liệu Global Success metadata identifies the title as Tiếng Anh 4 (English 4 — Global Success), NXB Giáo dục Việt Nam × Pearson, with 24 units across two semesters.
 - P0-01 rights status: source identity is recorded, but ownership/allowed-use evidence is still pending; textbook content must not be ingested or published yet.
+- Foundation review: full application suite passed — lint, typecheck, 9 unit tests, 1 Playwright journey, and production build. Foundation closeout remains pending because live RLS verification and release performance instrumentation are not yet evidenced.
+- Vertical-slice plan created at `docs/superpowers/plans/2026-09-19-learning-vertical-slice.md`; implementation is gated by P0-01 allowed-use evidence and P1-04 live RLS verification.
 - Product direction agreed: content-first MVP with light gamification and controlled AI later.
 - Primary user agreed: grade 4 student self-study.
 - MVP learning target agreed: vocabulary and sentence patterns by textbook lesson.
@@ -31,7 +33,7 @@
 - Delivery timeline created: eight weeks part-time or five to six weeks full-time when pilot content is ready at kickoff.
 - Development-agent routing policy created: one main coordinator, at most two concurrent subagents, and model selection kept in user-level Codex configuration.
 - Execution autonomy agreed: continue approved-plan work without routine confirmations; log low-impact assumptions and stop only for material missing authority or inputs.
-- Current next action: provision or link a disposable Supabase project, apply `0001_content_and_progress.sql`, and run the prepared two-user RLS verification query; P0-01 remains ready when the textbook is provided.
+- Current next action: obtain allowed-use evidence for the Global Success source and provision/link a disposable Supabase project, then apply `0001_content_and_progress.sql` and run the two-user RLS verification query before implementing the vertical slice.
 - Blockers: P0-01 still needs content/media ownership and allowed-use evidence; P1-04 also needs a disposable Supabase project/CLI configuration and two test-user identities for live RLS verification.
 
 ## Update template
