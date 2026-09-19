@@ -1,0 +1,141 @@
+{
+  "sourceId": "global-success-4-tap-1",
+  "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page6.html",
+  "entries": [
+    {
+      "id": "starter",
+      "title": "Starter",
+      "sourcePage": 7,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Greeting and self-introducing", "Classroom activities", "Outdoor activities"]
+    },
+    {
+      "id": "unit-01",
+      "title": "Unit 1: My friends",
+      "sourcePage": 10,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer where people are from"],
+      "structures": ["Where are you from? - I'm from ...", "Where's he/she from? - He's/She's from ..."],
+      "vocabulary": ["America", "Australia", "Britain", "Japan", "Malaysia", "Singapore", "Thailand", "Viet Nam"],
+      "phonics": ["America", "Australia"]
+    },
+    {
+      "id": "unit-02",
+      "title": "Unit 2: Time and daily routines",
+      "sourcePage": 16,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and tell the time", "Ask and answer about daily routines"],
+      "structures": ["What time is it? - It's ...", "What time do you ...? - I ... at ..."],
+      "vocabulary": ["fifteen", "forty-five", "o'clock", "thirty", "get up", "go to bed", "go to school", "have breakfast"],
+      "phonics": ["get", "bed"]
+    },
+    {
+      "id": "unit-03",
+      "title": "Unit 3: My week",
+      "sourcePage": 22,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about days of the week", "Ask and answer about weekly activities"],
+      "structures": ["What day is it today? - It's ...", "What do you do on ...? - I ..."],
+      "vocabulary": ["Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday", "do housework", "listen to music", "study at school"],
+      "phonics": ["music", "Sunday"]
+    },
+    {
+      "id": "unit-04",
+      "title": "Unit 4: My birthday party",
+      "sourcePage": 28,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about birthdays", "Ask and answer about food and drink preferences"],
+      "structures": ["When's your birthday? - It's in ...", "What do you want to eat/drink? - I want ..."],
+      "vocabulary": ["April", "February", "January", "March", "May", "birthday", "chips", "grapes", "jam", "juice", "lemonade", "party", "water"],
+      "phonics": ["jam", "water"]
+    },
+    {
+      "id": "unit-05",
+      "title": "Unit 5: Things we can do",
+      "sourcePage": 34,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about abilities and lack of abilities"],
+      "structures": ["Can you ...? - Yes, I can./No, I can't.", "Can he/she ...? - Yes, he/she can./No, he/she can't, but ..."],
+      "vocabulary": ["cook", "draw", "play the guitar", "play the piano", "ride a bike", "ride a horse", "roller skate", "swim", "but"],
+      "phonics": ["yes", "no"]
+    },
+    {
+      "id": "review-01",
+      "title": "Review 1 and Extension activities",
+      "sourcePage": 40,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Review listening, speaking, reading, writing, phonics, vocabulary, and grammar"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page6.html"
+    },
+    {
+      "id": "unit-06",
+      "title": "Unit 6: Our school facilities",
+      "sourcePage": 44,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about school location", "Ask and answer about school facilities"],
+      "structures": ["Where's your school? - It's in the ...", "How many ... are there at your school? - There is/are ..."],
+      "vocabulary": ["city", "mountains", "town", "village", "building", "computer room", "garden", "playground"],
+      "phonics": ["mountains", "villages"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "unit-07",
+      "title": "Unit 7: Our timetables",
+      "sourcePage": 50,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about school subjects and timetables"],
+      "structures": ["What subjects do you have today? - I have ...", "When do you have ...? - I have it on ..."],
+      "vocabulary": ["art", "English", "history and geography", "maths", "music", "science", "Vietnamese", "days of the week"],
+      "phonics": ["Vietnamese", "science"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "unit-08",
+      "title": "Unit 8: My favourite subjects",
+      "sourcePage": 56,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about favourite subjects", "Ask for and give reasons"],
+      "structures": ["What's your favourite subject? - It's ...", "Why do you like ...? - Because I want to be ..."],
+      "vocabulary": ["IT", "PE", "English teacher", "painter", "maths teacher", "because", "why"],
+      "phonics": ["like", "write"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "unit-09",
+      "title": "Unit 9: Our sports day",
+      "sourcePage": 62,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about sports day and when it is"],
+      "structures": ["Is your sports day in ...? - Yes, it is./No, it isn't.", "When's your sports day? - It's in ..."],
+      "vocabulary": ["December", "June", "July", "November", "October", "September", "sports day"],
+      "phonics": ["February", "July"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "unit-10",
+      "title": "Unit 10: Our holidays",
+      "sourcePage": 68,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Ask and answer about past locations and activities"],
+      "structures": ["Were you ... last weekend? - Yes, I was./No, I wasn't.", "Where were you last summer? - I was in ..."],
+      "vocabulary": ["beach", "campsite", "countryside", "Bangkok", "London", "Sydney", "Tokyo", "last", "yesterday", "at/on/in (+ place)"],
+      "phonics": ["were", "where"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "review-02",
+      "title": "Review 2 and Extension activities",
+      "sourcePage": 74,
+      "sourceId": "global-success-4-tap-1",
+      "competencies": ["Review listening, speaking, reading, writing, phonics, vocabulary, and grammar"],
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    },
+    {
+      "id": "wordlist",
+      "title": "Wordlist",
+      "sourcePage": 78,
+      "sourceId": "global-success-4-tap-1",
+      "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page7.html"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 
 **Architecture:** Keep extraction and authoring tools outside the Next.js runtime, store normalized content and review records separately from React, and expose only approved records through the existing `ContentRepository`. Repository skills document repeatable decisions; deterministic scripts do mechanical extraction, manifest generation, and coverage checks.
 
-**Tech Stack:** Python 3.11+ with `pypdf`, `pdfplumber`, `pytest`, and `argparse` for content tooling; TypeScript/Zod/Vitest for app contracts; Playwright for the student flow; JSON fixtures for the Volume 1 pilot.
+**Tech Stack:** Python 3.9+ with `pypdf`, `pdfplumber`, `pytest`, and `argparse` for content tooling; TypeScript/Zod/Vitest for app contracts; Playwright for the student flow; JSON fixtures for the Volume 1 pilot.
 
 **Spec:** `docs/superpowers/specs/2026-09-19-textbook-content-pipeline-design.md`
 
