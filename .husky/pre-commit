@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+set -e
+
+if ! command -v node >/dev/null 2>&1; then
+  nvm_script="${NVM_DIR:-$HOME/.nvm}/nvm.sh"
+  if [ -s "$nvm_script" ]; then
+    # shellcheck disable=SC1090
+    . "$nvm_script"
+    nvm use --silent >/dev/null
+  fi
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "Node.js is required to run the pre-commit quality gate." >&2
+  exit 1
+fi
+
+repo_root=$(git rev-parse --show-toplevel)
+"$repo_root/apps/web/node_modules/.bin/lint-staged" \
+  --cwd "$repo_root/apps/web" \
+  --config "$repo_root/apps/web/lint-staged.config.mjs"

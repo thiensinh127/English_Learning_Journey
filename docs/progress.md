@@ -42,6 +42,13 @@
 - P1-06 Task 2 started: `npm run check` was absent as expected; the package contract and nested web instructions are now being added.
 - P1-06 Task 2 moved to Review: added `npm run check` and scoped web-package rules for quality, e2e coverage, accessibility, Supabase boundaries, and content separation.
 - P1-06 Task 2 verification: from `apps/web`, `npm run check` passed with lint, typecheck, 5 test files/9 tests, and production build; Codex read the root and nested instructions in read-only mode.
+- P1-06 Task 3 ruling: keep the lint-staged configuration under `apps/web`, but place the executable Husky hook at repository root because this worktree's Git root is the monorepo root; a nested `apps/web/.husky/pre-commit` would not be invoked by Git after clone.
+- P1-06 Task 3 ruling: make the web package's `prepare` script initialize Husky from the repository root (`cd ../.. && apps/web/node_modules/.bin/husky`); running plain `husky` from `apps/web` cannot discover this worktree's Git root.
+- P1-06 Task 3 verification: root Husky bootstrap set `core.hooksPath=.husky/_`; a staged invalid TypeScript file caused `.husky/pre-commit` to exit with status 1 and report the parse error. An unused variable was not a valid failure fixture because the current ESLint preset does not enable that rule.
+- P1-06 Task 3 CI added: `.github/workflows/quality.yml` runs `npm ci`, `npm run check`, Playwright Chromium installation, and `npm run test:e2e` on pushes to `main` and pull requests.
+- P1-06 Task 3 moved to Review: added root Husky/lint-staged enforcement, Prettier for staged JSON/Markdown/YAML, ESLint for staged source files, and GitHub Actions quality checks.
+- P1-06 Task 3 verification: root hook passed on real staged files; `npm run check` passed with 5 test files/9 tests and production build; `npm run test:e2e` passed 1 Playwright test; `npx playwright install --with-deps chromium` exited 0; `git diff --check` passed.
+- Ruling: add a portable nvm fallback in the root hook because Git's hook environment omitted the interactive shell's Node PATH; the hook still fails clearly when no Node.js installation is available.
 
 ## Update template
 
