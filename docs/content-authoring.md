@@ -50,6 +50,14 @@ AI-generated or manually drafted student-facing text is published until a
 qualified content reviewer confirms the source, rights, age appropriateness,
 and Vietnamese meaning.
 
+Structured source, media, review, and activity records use the contracts in
+`apps/web/src/features/content/source-schema.ts` and
+`apps/web/src/features/content/activity-schema.ts`. A record is publishable
+only when its review is approved, its rights status is confirmed, it has
+non-empty rights evidence, and it has at least one source reference. Activity
+evaluation remains a pure deterministic function separate from the Zod data
+schema.
+
 ## Authoring checklist
 
 1. Create structured lesson data; never place textbook text in a React
