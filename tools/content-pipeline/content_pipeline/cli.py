@@ -6,6 +6,7 @@ from pathlib import Path
 
 from .normalize_book_map import normalize_book_map
 from .pdf_extract import extract_pages
+from .media_manifest import build_media_manifest
 
 
 def _extract_pdf(args: argparse.Namespace) -> None:
@@ -21,6 +22,16 @@ def _extract_pdf(args: argparse.Namespace) -> None:
     )
 
 
+def _media_manifest(args: argparse.Namespace) -> None:
+    records = json.loads(Path(args.input).read_text(encoding='utf-8'))
+    if isinstance(records, dict):
+        records = records.get('assets', records.get('records', []))
+    manifest = build_media_manifest(records)
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description='English Learning content pipeline')
     commands = parser.add_subparsers(dest='command', required=True)
@@ -29,6 +40,10 @@ def build_parser() -> argparse.ArgumentParser:
     extract.add_argument('--output', required=True, type=Path)
     extract.add_argument('--source-id', required=True)
     extract.set_defaults(handler=_extract_pdf)
+    media = commands.add_parser('media-manifest', help='Validate reviewed media records')
+    media.add_argument('--input', required=True, type=Path)
+    media.add_argument('--output', required=True, type=Path)
+    media.set_defaults(handler=_media_manifest)
     return parser
 
 
