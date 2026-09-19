@@ -13,6 +13,11 @@ This source is currently a reference candidate only. Do not copy, ingest, or
 publish textbook pages, audio, or images until the allowed-use scope and source
 ownership are recorded in the review record below.
 
+Public metadata cross-check identifies the title as **Tiếng Anh 4 (English 4 —
+Global Success)**, published by **NXB Giáo dục Việt Nam × Pearson**, with **24
+units across two semesters**. This confirms the product scope; it does not
+confirm a licence to reproduce the source materials.
+
 ## Lesson data
 
 Each lesson must pass `lessonSchema` in

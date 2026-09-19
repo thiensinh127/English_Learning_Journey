@@ -17,6 +17,7 @@
 - P1-04 application verification: `npm run test -- src/lib/env.test.ts`, `npm run test`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
 - P1-04 blocker: no Supabase CLI, `supabase/config.toml`, linked/local disposable project, or two authenticated test users are available. The migration and RLS verification query have not been executed against Postgres/Auth; no RLS claim is made yet.
 - P0-01 source identified by product owner: Tiếng Anh 4 Global Success, Học liệu.VN e-book ID `3`, page reference URL recorded in `docs/content-authoring.md`.
+- P0-01 metadata cross-check: public Học liệu Global Success metadata identifies the title as Tiếng Anh 4 (English 4 — Global Success), NXB Giáo dục Việt Nam × Pearson, with 24 units across two semesters.
 - P0-01 rights status: source identity is recorded, but ownership/allowed-use evidence is still pending; textbook content must not be ingested or published yet.
 - Product direction agreed: content-first MVP with light gamification and controlled AI later.
 - Primary user agreed: grade 4 student self-study.
