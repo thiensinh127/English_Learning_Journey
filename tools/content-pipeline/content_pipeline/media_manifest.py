@@ -73,19 +73,28 @@ def download_approved_media(
     digest = hashlib.sha256()
     destination = output / record['id']
     total = 0
-    with urlopen(request, timeout=20) as response, destination.open('wb') as handle:
-        if getattr(response, 'status', 200) != 200:
-            raise ValueError('media response was not successful')
-        response_type = response.headers.get_content_type()
-        if not response_type.startswith(f"{record['mediaType']}/"):
-            raise ValueError('media response MIME type mismatch')
-        while chunk := response.read(1024 * 64):
-            total += len(chunk)
-            if total > max_bytes:
-                destination.unlink(missing_ok=True)
-                raise ValueError('media exceeds max_bytes')
-            digest.update(chunk)
-            handle.write(chunk)
+    try:
+        response = urlopen(request, timeout=20)
+    except Exception:
+        destination.unlink(missing_ok=True)
+        raise
+    try:
+        with response:
+            if getattr(response, 'status', 200) != 200:
+                raise ValueError('media response was not successful')
+            response_type = response.headers.get_content_type()
+            if not response_type.startswith(f"{record['mediaType']}/"):
+                raise ValueError('media response MIME type mismatch')
+            with destination.open('wb') as handle:
+                while chunk := response.read(1024 * 64):
+                    total += len(chunk)
+                    if total > max_bytes:
+                        raise ValueError('media exceeds max_bytes')
+                    digest.update(chunk)
+                    handle.write(chunk)
+    except Exception:
+        destination.unlink(missing_ok=True)
+        raise
     if digest.hexdigest() != record['checksum'].lower():
         destination.unlink(missing_ok=True)
         raise ValueError('downloaded media checksum mismatch')

@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .normalize_book_map import normalize_book_map
+from .normalize_book_map import normalize_book_map, validate_book_map_coverage
 from .pdf_extract import extract_pages
 from .media_manifest import build_media_manifest
 
@@ -16,9 +16,10 @@ def _extract_pdf(args: argparse.Namespace) -> None:
     (output / 'raw-pages.json').write_text(
         json.dumps(pages, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
     )
+    book_map = normalize_book_map(pages)
+    validate_book_map_coverage(book_map)
     (output / 'book-map.json').write_text(
-        json.dumps(normalize_book_map(pages), ensure_ascii=False, indent=2) + '\n',
-        encoding='utf-8',
+        json.dumps(book_map, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
     )
 
 
