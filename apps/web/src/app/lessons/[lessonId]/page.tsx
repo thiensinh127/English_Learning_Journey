@@ -2,13 +2,16 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { AppShell } from '@/components/app-shell';
 import { MediaControl } from '@/components/media-control';
-import { fixtureContentRepository } from '@/features/content/fixture-repository';
+import { getStudentContentRepository } from '@/features/content/student-content-repository';
 
 export default async function LessonPage(props: {
   params: Promise<{ lessonId: string }>;
+  searchParams: Promise<{ demo?: string }>;
 }) {
   const { lessonId } = await props.params;
-  const lesson = await fixtureContentRepository.getLesson(lessonId);
+  const { demo } = await props.searchParams;
+  const isDemo = demo === '1';
+  const lesson = await getStudentContentRepository({ demo: isDemo }).getLesson(lessonId);
 
   if (!lesson) {
     notFound();
@@ -16,10 +19,12 @@ export default async function LessonPage(props: {
 
   return (
     <AppShell>
-      <p className="rounded-md bg-amber-100 px-3 py-2 text-sm font-semibold text-amber-950">
-        Demo content — not approved for study.
-      </p>
-      <Link className="mt-6 inline-block font-semibold text-sky-700" href="/lessons">
+      {isDemo ? (
+        <p className="rounded-md bg-amber-100 px-3 py-2 text-sm font-semibold text-amber-950">
+          Demo content — not approved for study.
+        </p>
+      ) : null}
+      <Link className="mt-6 inline-block font-semibold text-sky-700" href={isDemo ? '/lessons?demo=1' : '/lessons'}>
         Back to lessons
       </Link>
       <h1 className="mt-4 text-3xl font-bold">{lesson.title}</h1>

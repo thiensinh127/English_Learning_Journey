@@ -2,6 +2,39 @@
 
 ## 2026-09-19
 
+- Textbook pipeline implementation completed through the first Unit 1 pilot:
+  provenance/activity contracts, four repository skills, PDF page extraction,
+  verified Volume 1 book map, approved-media manifest tooling, deterministic
+  activities, and an approved-content repository gate. Commits: `fb2441c`,
+  `ad73de1`, `ab12741`, `2fd0499`, `233c007`, `c2ee38b`.
+- Pipeline verification: web `npm run check` passed with 10 test files/33
+  tests and production build; `npm run test:e2e` passed 2 tests; Python
+  pipeline passed 12 tests; all four repository skill validators passed.
+- PDF evidence: the supplied 82-page PDF has no text layer; all pages are
+  marked image-only for review. The normalized book map is sourced from the
+  verified FlipBuilder HTML book map; no silent OCR or guessed text was added.
+- Unit 1 pilot is `in_review` and intentionally not published. Student routes
+  use the approved repository by default; demo fixtures require explicit
+  development `?demo=1` mode. Missing audio remains an accessible fallback.
+- Remaining blockers: formal permission artifact location, concrete approved
+  audio/image input URLs, human content review for Unit 1, and live Supabase/
+  RLS verification.
+- P0-01 rights update: product owner confirmed that permission to use the
+  *Tiếng Anh 4 Global Success* content/media has been obtained. Task moved to
+  Review; retain the permission artifact when available and do not publish
+  content outside the approved scope.
+- Next action after rights confirmation: prepare the approved pilot content
+  package for P0-03 and complete live Supabase/RLS verification for P1-04.
+- UI design system established from the approved responsive mockup: Baloo 2
+  display headings, Nunito body text, semantic Journey color tokens, 8px
+  spacing rhythm, 48px minimum touch targets, and mobile/tablet/desktop rules.
+- Added `docs/design-system.md` as the visual source of truth and updated
+  `apps/web/AGENTS.md` to require it for future UI work.
+- Updated the web shell to load the approved fonts, expose `journey-*` Tailwind
+  color tokens, use the light sky background, and rename metadata to English
+  Learning Journey.
+- Design-system verification: `npm run check` passed (lint, typecheck, 5 test
+  files/9 tests, and production build).
 - P1-01 started in isolated Git worktree `feat/foundation`.
 - Ruling: the AppShell failing test belongs to Task 2, immediately before AppShell implementation; Task 1 must retain a passing TypeScript build.
 - P1-01 verification: Node 22.23.2; `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.

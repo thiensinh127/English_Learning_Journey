@@ -23,7 +23,7 @@ export const reviewRecordSchema = z.object({
   rightsEvidence: z.string().trim().min(1),
   sourceRefs: z.array(sourceRefSchema),
   authorOrAdaptor: z.string().trim().min(1),
-  reviewer: z.string().trim().min(1).optional(),
+  reviewer: z.string().trim().min(1),
   status: z.enum(['draft', 'in_review', 'approved', 'rejected']),
   notes: z.string().optional(),
 });
@@ -59,6 +59,9 @@ export function isPublishable(review: ReviewRecord): boolean {
     review.status === 'approved' &&
     review.rightsStatus === 'confirmed' &&
     review.rightsEvidence.trim().length > 0 &&
-    review.sourceRefs.length > 0
+    review.sourceRefs.length > 0 &&
+    review.sourceRefs.every(
+      (sourceRef) => sourceRef.sourcePage !== undefined || sourceRef.sourceTrack !== undefined,
+    )
   );
 }

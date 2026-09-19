@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { createApprovedContentRepository } from './approved-content-repository';
 import { lessonSchema, type Lesson } from './schema';
 import { reviewRecordSchema } from './source-schema';
+import { getStudentContentRepository } from './student-content-repository';
 
 const lesson: Lesson = lessonSchema.parse({
   id: 'unit-1-lesson-1',
@@ -48,5 +49,10 @@ describe('createApprovedContentRepository', () => {
     const repository = createApprovedContentRepository([lesson], []);
 
     await expect(repository.getLesson(lesson.id)).resolves.toBeNull();
+  });
+
+  it('keeps the demo repository behind an explicit development flag', async () => {
+    await expect(getStudentContentRepository().listLessons()).resolves.toEqual([]);
+    await expect(getStudentContentRepository({ demo: true }).listLessons()).resolves.toHaveLength(1);
   });
 });

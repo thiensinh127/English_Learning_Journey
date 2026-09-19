@@ -43,3 +43,10 @@ def test_build_media_manifest_rejects_duplicate_ids_and_bad_checksum():
 
     with pytest.raises(ValueError, match='checksum'):
         build_media_manifest([{**approved_audio(), 'checksum': 'bad'}])
+
+
+def test_build_media_manifest_requires_page_or_track_provenance():
+    record = {**approved_audio(), 'sourcePage': None, 'sourceTrack': None}
+
+    with pytest.raises(ValueError, match='sourcePage or sourceTrack'):
+        build_media_manifest([record])

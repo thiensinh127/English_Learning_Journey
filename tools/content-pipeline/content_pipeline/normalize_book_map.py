@@ -7,6 +7,7 @@ from typing import Any
 SECTION_PATTERN = re.compile(
     r'(?im)^\s*(Starter|Unit\s+(\d{1,2})(?:\s+[^\n]*)?|Review\s+([12])(?:\s+[^\n]*)?|Wordlist)\s*$'
 )
+EXPECTED_SECTION_IDS = {'starter', *(f'unit-{index:02d}' for index in range(1, 11)), 'review-01', 'review-02', 'wordlist'}
 
 
 def _section_id(label: str) -> str:
@@ -39,3 +40,10 @@ def normalize_book_map(page_records: list[dict[str, Any]]) -> dict[str, Any]:
                 }
             )
     return {'sourceId': source_id, 'entries': entries}
+
+
+def validate_book_map_coverage(book_map: dict[str, Any]) -> None:
+    found = {entry['id'] for entry in book_map.get('entries', [])}
+    missing = sorted(EXPECTED_SECTION_IDS - found)
+    if missing:
+        raise ValueError(f'missing book-map sections: {", ".join(missing)}')

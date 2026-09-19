@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Lesson } from '@/features/content/schema';
 import { getLessonStatus } from '@/features/lessons/get-lesson-status';
 
-export function LessonCard({ lesson }: { lesson: Lesson }) {
+export function LessonCard({ lesson, demo = false }: { lesson: Lesson; demo?: boolean }) {
   const status = getLessonStatus(undefined);
 
   return (
@@ -11,7 +11,7 @@ export function LessonCard({ lesson }: { lesson: Lesson }) {
       <p className="mt-1 text-sm text-slate-600">{status.label}</p>
       <Link
         className="mt-4 inline-flex rounded-md bg-sky-600 px-4 py-2 font-semibold text-white"
-        href={`/lessons/${lesson.id}`}
+        href={`/lessons/${lesson.id}${demo ? '?demo=1' : ''}`}
       >
         Open lesson: {lesson.title}
       </Link>

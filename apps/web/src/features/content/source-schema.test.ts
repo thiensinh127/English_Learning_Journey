@@ -31,6 +31,19 @@ describe('source and review schemas', () => {
     expect(result.success).toBe(false);
   });
 
+  it('requires a reviewer for an approved review record', () => {
+    const result = reviewRecordSchema.safeParse({
+      contentId: 'unit-1-lesson-1',
+      rightsStatus: 'confirmed',
+      rightsEvidence: 'permission-record-001',
+      sourceRefs: [sourceRef],
+      authorOrAdaptor: 'team',
+      status: 'approved',
+    });
+
+    expect(result.success).toBe(false);
+  });
+
   it('requires approved rights and a source reference before publishing', () => {
     const review = reviewRecordSchema.parse({
       contentId: 'unit-1-lesson-1',
@@ -47,6 +60,9 @@ describe('source and review schemas', () => {
       isPublishable({ ...review, rightsEvidence: '   ' }),
     ).toBe(false);
     expect(isPublishable({ ...review, sourceRefs: [] })).toBe(false);
+    expect(
+      isPublishable({ ...review, sourceRefs: [{ ...sourceRef, sourcePage: undefined }] }),
+    ).toBe(false);
     expect(isPublishable({ ...review, status: 'in_review' })).toBe(false);
   });
 

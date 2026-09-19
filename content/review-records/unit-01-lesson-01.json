@@ -7,6 +7,7 @@
     {"sourceId": "global-success-4-tap-1", "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page13.html", "sourcePage": 13, "sourceTrack": "Tracks 8-9", "extractionMethod": "web-reference"}
   ],
   "authorOrAdaptor": "English Learning Journey content team",
+  "reviewer": "product-owner",
   "status": "in_review",
   "notes": "Source-grounded pilot draft. Requires human content review before student publication; audio IDs remain unassigned until approved media URLs are listed."
 }

@@ -37,6 +37,8 @@ def build_media_manifest(records: list[dict[str, Any]]) -> dict[str, Any]:
         if rights_status != 'confirmed':
             raise ValueError('rightsStatus must be confirmed before download')
         _require_text(record, 'rightsEvidence')
+        if not record.get('sourcePage') and not record.get('sourceTrack'):
+            raise ValueError('sourcePage or sourceTrack is required')
         mime_type = _require_text(record, 'mimeType')
         if not mime_type.startswith(f'{media_type}/'):
             raise ValueError(f'mimeType must match mediaType: {media_type}')
@@ -72,6 +74,11 @@ def download_approved_media(
     destination = output / record['id']
     total = 0
     with urlopen(request, timeout=20) as response, destination.open('wb') as handle:
+        if getattr(response, 'status', 200) != 200:
+            raise ValueError('media response was not successful')
+        response_type = response.headers.get_content_type()
+        if not response_type.startswith(f"{record['mediaType']}/"):
+            raise ValueError('media response MIME type mismatch')
         while chunk := response.read(1024 * 64):
             total += len(chunk)
             if total > max_bytes:
