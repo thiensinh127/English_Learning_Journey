@@ -1,0 +1,19 @@
+# Dependencies and build output
+node_modules/
+.next/
+coverage/
+playwright-report/
+test-results/
+
+# Local configuration and generated files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Agent/worktree scratch space
+.worktrees/
+.superpowers/
+
+# Operating system files
+.DS_Store
