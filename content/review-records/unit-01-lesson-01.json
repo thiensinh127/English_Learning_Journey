@@ -1,0 +1,12 @@
+{
+  "contentId": "unit-1-lesson-1",
+  "rightsStatus": "confirmed",
+  "rightsEvidence": "product-owner-confirmation-2026-09-19",
+  "sourceRefs": [
+    {"sourceId": "global-success-4-tap-1", "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page12.html", "sourcePage": 12, "sourceTrack": "Tracks 6-9", "extractionMethod": "web-reference"},
+    {"sourceId": "global-success-4-tap-1", "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page13.html", "sourcePage": 13, "sourceTrack": "Tracks 8-9", "extractionMethod": "web-reference"}
+  ],
+  "authorOrAdaptor": "English Learning Journey content team",
+  "status": "in_review",
+  "notes": "Source-grounded pilot draft. Requires human content review before student publication; audio IDs remain unassigned until approved media URLs are listed."
+}

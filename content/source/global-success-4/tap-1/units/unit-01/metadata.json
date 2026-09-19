@@ -1,0 +1,16 @@
+{
+  "id": "unit-01",
+  "title": "Unit 1: My friends",
+  "sourceId": "global-success-4-tap-1",
+  "sourcePage": 10,
+  "sourceUrl": "https://online.flipbuilder.com/sdtta/icnl/files/basic-html/page6.html",
+  "competencies": ["Ask and answer where people are from"],
+  "structures": [
+    "Where are you from? - I'm from ...",
+    "Where's he/she from? - He's/She's from ..."
+  ],
+  "vocabulary": [
+    "America", "Australia", "Britain", "Japan", "Malaysia", "Singapore", "Thailand", "Viet Nam"
+  ],
+  "phonics": ["America", "Australia"]
+}

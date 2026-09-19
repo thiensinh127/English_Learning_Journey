@@ -1,0 +1,51 @@
+[
+  {
+    "id": "unit-1-lesson-1-flashcard-viet-nam",
+    "lessonId": "unit-1-lesson-1",
+    "activityType": "flashcard",
+    "prompt": "Viet Nam nghĩa là gì?",
+    "answer": "Việt Nam",
+    "sourceRefs": [{"sourceId": "global-success-4-tap-1", "sourcePage": 12, "sourceTrack": "Track 6", "extractionMethod": "web-reference"}],
+    "feedbackId": "encouraging-correct"
+  },
+  {
+    "id": "unit-1-lesson-1-picture-word-britain",
+    "lessonId": "unit-1-lesson-1",
+    "activityType": "picture-word-match",
+    "prompt": "Chọn từ đúng cho hình lá cờ nước Anh.",
+    "options": ["Britain", "America", "Australia"],
+    "answer": "Britain",
+    "sourceRefs": [{"sourceId": "global-success-4-tap-1", "sourcePage": 12, "sourceTrack": "Track 7", "extractionMethod": "web-reference"}],
+    "feedbackId": "encouraging-correct"
+  },
+  {
+    "id": "unit-1-lesson-1-listening-minh",
+    "lessonId": "unit-1-lesson-1",
+    "activityType": "listening-choice",
+    "prompt": "Minh đến từ đâu?",
+    "options": ["Viet Nam", "Britain", "Australia"],
+    "answer": "Viet Nam",
+    "sourceRefs": [{"sourceId": "global-success-4-tap-1", "sourcePage": 12, "sourceTrack": "Track 6", "extractionMethod": "web-reference"}],
+    "feedbackId": "encouraging-correct"
+  },
+  {
+    "id": "unit-1-lesson-1-sentence-order",
+    "lessonId": "unit-1-lesson-1",
+    "activityType": "sentence-choice-order",
+    "prompt": "Sắp xếp câu đúng.",
+    "options": ["I'm", "from", "Viet Nam"],
+    "answer": ["I'm", "from", "Viet Nam"],
+    "sourceRefs": [{"sourceId": "global-success-4-tap-1", "sourcePage": 12, "sourceTrack": "Track 6", "extractionMethod": "web-reference"}],
+    "feedbackId": "encouraging-correct"
+  },
+  {
+    "id": "unit-1-lesson-1-quiz",
+    "lessonId": "unit-1-lesson-1",
+    "activityType": "unit-quiz",
+    "prompt": "Hoàn thành câu: Where are you ___?",
+    "options": ["from", "friend", "fine"],
+    "answer": "from",
+    "sourceRefs": [{"sourceId": "global-success-4-tap-1", "sourcePage": 12, "sourceTrack": "Track 7", "extractionMethod": "web-reference"}],
+    "feedbackId": "encouraging-correct"
+  }
+]

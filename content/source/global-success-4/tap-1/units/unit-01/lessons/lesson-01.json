@@ -1,0 +1,15 @@
+{
+  "id": "unit-1-lesson-1",
+  "unitId": "unit-01",
+  "title": "Where are you from?",
+  "vocabulary": [
+    {"id": "america", "word": "America", "meaning": "nước Mỹ", "example": "I'm from America."},
+    {"id": "australia", "word": "Australia", "meaning": "nước Úc", "example": "I'm from Australia."},
+    {"id": "britain", "word": "Britain", "meaning": "nước Anh", "example": "I'm from Britain."},
+    {"id": "viet-nam", "word": "Viet Nam", "meaning": "Việt Nam", "example": "I'm from Viet Nam."}
+  ],
+  "sentencePatterns": [
+    {"id": "where-are-you-from", "pattern": "Where are you from?", "meaning": "Bạn đến từ đâu?", "example": "Where are you from?"},
+    {"id": "im-from", "pattern": "I'm from ...", "meaning": "Mình đến từ ...", "example": "I'm from Viet Nam."}
+  ]
+}
