@@ -2,6 +2,9 @@
 
 ## 2026-09-19
 
+- P1-01 started in isolated Git worktree `feat/foundation`.
+- Ruling: the AppShell failing test belongs to Task 2, immediately before AppShell implementation; Task 1 must retain a passing TypeScript build.
+- P1-01 verification: Node 22.23.2; `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
 - Product direction agreed: content-first MVP with light gamification and controlled AI later.
 - Primary user agreed: grade 4 student self-study.
 - MVP learning target agreed: vocabulary and sentence patterns by textbook lesson.

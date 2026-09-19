@@ -7,7 +7,7 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 | P0-01 | P0 | Confirm textbook and content rights | Ready | — |
 | P0-02 | P0 | Define content schema and authoring format | Backlog | P0-01 |
 | P0-03 | P0 | Prepare pilot content | Backlog | P0-02 |
-| P1-01 | P0 | Initialize Next.js project | Backlog | — |
+| P1-01 | P0 | Initialize Next.js project | Review | — |
 | P1-02 | P0 | Establish quality tooling | Backlog | P1-01 |
 | P1-03 | P1 | Establish UI foundation | Backlog | P1-01 |
 | P1-04 | P0 | Set up Supabase boundaries | Backlog | P1-01 |
@@ -40,4 +40,3 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 - Verification:
 - Notes/blockers:
 ```
-

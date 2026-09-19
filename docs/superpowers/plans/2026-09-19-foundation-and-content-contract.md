@@ -138,31 +138,7 @@ Create `apps/web/src/test/setup.ts`:
 import '@testing-library/jest-dom/vitest';
 ```
 
-- [ ] **Step 5: Add a failing smoke test before adding its component**
-
-Create `apps/web/src/components/app-shell.test.tsx`:
-
-```tsx
-import { render, screen } from '@testing-library/react';
-import { AppShell } from './app-shell';
-
-it('shows the student app name', () => {
-  render(<AppShell>Lesson content</AppShell>);
-  expect(screen.getByRole('banner', { name: 'English Explorer' })).toBeInTheDocument();
-});
-```
-
-- [ ] **Step 6: Run the smoke test to confirm the initial failure**
-
-Run:
-
-```bash
-npm run test -- src/components/app-shell.test.tsx
-```
-
-Expected: FAIL because `./app-shell` does not yet exist.
-
-- [ ] **Step 7: Run baseline checks and record evidence**
+- [ ] **Step 5: Run baseline checks and record evidence**
 
 Run:
 
@@ -172,9 +148,9 @@ npm run typecheck
 npm run build
 ```
 
-Expected: lint, typecheck, and production build pass. The smoke test intentionally remains failing until Task 2, so do not run the full test suite at this step.
+Expected: lint, typecheck, and production build pass.
 
-- [ ] **Step 8: Update tracking and commit**
+- [ ] **Step 6: Update tracking and commit**
 
 Move `P1-01` to `Review`; add command results to `docs/progress.md`; then commit:
 
@@ -196,7 +172,19 @@ git commit -m "chore: initialize web application"
 
 **Produces:** `AppShell({ children }: { children: React.ReactNode })` with a labelled banner, main landmark, skip link, and responsive content container.
 
-- [ ] **Step 1: Run the existing failing shell test**
+- [ ] **Step 1: Write and run the failing shell test**
+
+Create `apps/web/src/components/app-shell.test.tsx`:
+
+```tsx
+import { render, screen } from '@testing-library/react';
+import { AppShell } from './app-shell';
+
+it('shows the student app name', () => {
+  render(<AppShell>Lesson content</AppShell>);
+  expect(screen.getByRole('banner', { name: 'English Explorer' })).toBeInTheDocument();
+});
+```
 
 Run:
 
@@ -204,7 +192,7 @@ Run:
 npm run test -- src/components/app-shell.test.tsx
 ```
 
-Expected: FAIL because `AppShell` is not exported.
+Expected: FAIL because `./app-shell` does not yet exist.
 
 - [ ] **Step 2: Add a mobile-first shell implementation**
 
