@@ -22,6 +22,12 @@ credentials, external MCP services, or a product-level model router.
   MCP dependencies, or a product model router at this stage.
 - Keep account-specific model IDs and reasoning preferences in user-level
   Codex configuration, never in this repository.
+- For development sessions, use the default model for inspection and small
+  edits; use greater reasoning only for architecture, security/RLS,
+  migrations, or complex debugging, and record material changes.
+- Treat any future product AI use case as a separate post-pilot ADR requiring
+  human review, source grounding, child-safety controls, cost/latency limits,
+  logging, fallback behavior, and tests.
 
 ## Consequences
 

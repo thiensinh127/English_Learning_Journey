@@ -52,6 +52,10 @@
 - P1-06 Task 4 started: adding only `content-qc` and `student-flow-qa` repository skills plus the Codex operating playbook.
 - P1-06 Task 4 moved to Review: added `content-qc`, `student-flow-qa`, and `docs/codex-playbook.md` with content-rights, deterministic QA, accessibility, performance, and evidence boundaries.
 - P1-06 Task 4 verification: both skills passed `skill-creator/scripts/quick_validate.py`; Codex read-only discovery listed both repository skills and their triggers; placeholder scan and `git diff --check` passed.
+- P1-06 Task 5 started: documenting development-session model selection and the post-pilot product AI boundary; no model provider or router is being added to the repository.
+- P1-06 Task 5 moved to Review: documented user-level development model policy and deferred product AI/model-router boundary in the playbook and ADR 0002.
+- P1-06 Task 5 verification: the planned secret scan matched only literal command examples inside plan documents; an assignment-pattern scan excluding plan text returned no credentials or provider configuration, and `git diff --check` passed.
+- Ruling: retain the literal scan examples in the implementation plan as documentation, but use the assignment-pattern scan as the credential evidence because the plan necessarily contains the searched token names.
 
 ## Update template
 

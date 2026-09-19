@@ -18,3 +18,21 @@
 Git hooks provide a fast local gate. GitHub Actions provides the complete web
 quality and browser gate. Missing external services must be documented as
 blockers, not replaced by unsupported claims.
+
+## Development-session model policy
+
+- Use the default model for repository inspection, documentation, and small
+  edits.
+- Increase reasoning for architecture, security/RLS, migrations, or complex
+  debugging; use the fastest suitable setting for mechanical work.
+- Explain a model or reasoning change in the task update when it affects cost,
+  latency, or confidence.
+- Keep account-specific model IDs, provider settings, and reasoning defaults
+  in user-level Codex configuration, never in project files.
+
+## Product AI boundary
+
+The MVP has no product model router and no AI-generated student-facing lesson
+content. A post-pilot AI use case requires an ADR covering the user outcome,
+human review, source grounding, child safety, cost and latency limits, logging,
+fallback behavior, and deterministic tests before implementation.
