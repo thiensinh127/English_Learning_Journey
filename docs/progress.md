@@ -35,6 +35,10 @@
 - Execution autonomy agreed: continue approved-plan work without routine confirmations; log low-impact assumptions and stop only for material missing authority or inputs.
 - Current next action: obtain allowed-use evidence for the Global Success source and provision/link a disposable Supabase project, then apply `0001_content_and_progress.sql` and run the two-user RLS verification query before implementing the vertical slice.
 - Blockers: P0-01 still needs content/media ownership and allowed-use evidence; P1-04 also needs a disposable Supabase project/CLI configuration and two test-user identities for live RLS verification.
+- P1-06 started: the project workflow configuration and automation-boundary ADR are being added before quality hooks, CI, and reusable repository skills.
+- P1-06 Task 1 moved to Review: added `.codex/config.toml` with project-root discovery only and ADR 0002 for quality automation, external integration, and model-routing boundaries.
+- P1-06 Task 1 verification: `codex exec -s read-only ...` listed `AGENTS.md`, `apps/web/AGENTS.md`, and the active backlog task without changing files; `git diff --check` passed.
+- Ruling: use `codex exec` for non-TTY instruction verification because the plan's interactive `codex --ask-for-approval` command refuses to start when `TERM=dumb`; this changes only the verification invocation, not project behavior.
 
 ## Update template
 
