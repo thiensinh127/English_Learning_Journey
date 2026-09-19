@@ -12,7 +12,7 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 | P1-03 | P1 | Establish UI foundation | Review | P1-01 |
 | P1-04 | P0 | Set up Supabase boundaries | Blocked | P1-01 |
 | P1-05 | P0 | Add project tracking workflow | Backlog | P1-01 |
-| P1-06 | P0 | Establish Codex workflow and quality gates | In Progress | P1-01 |
+| P1-06 | P0 | Establish Codex workflow and quality gates | Done | P1-01 |
 | P2-01 | P0 | Implement content ingestion | Backlog | P0-03, P1-04 |
 | P2-02 | P0 | Build textbook and lesson navigation | Review | P2-01, P1-03 |
 | P2-03 | P0 | Build vocabulary learning | Backlog | P2-02 |

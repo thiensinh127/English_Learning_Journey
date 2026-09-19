@@ -56,6 +56,9 @@
 - P1-06 Task 5 moved to Review: documented user-level development model policy and deferred product AI/model-router boundary in the playbook and ADR 0002.
 - P1-06 Task 5 verification: the planned secret scan matched only literal command examples inside plan documents; an assignment-pattern scan excluding plan text returned no credentials or provider configuration, and `git diff --check` passed.
 - Ruling: retain the literal scan examples in the implementation plan as documentation, but use the assignment-pattern scan as the credential evidence because the plan necessarily contains the searched token names.
+- P1-06 completed: Codex project configuration, web quality command contract, root Husky/lint-staged hook, GitHub Actions workflow, two repository skills, playbook, and model/integration boundaries are committed.
+- P1-06 final verification: `npm run check` passed (lint, typecheck, 5 test files/9 tests, production build); `npm run test:e2e` passed 1 Playwright test; both skill validators passed; secret assignment scan found no credentials/provider configuration; `git diff --check` passed.
+- Next action: resolve P0-01 allowed-use evidence and P1-04 live Supabase/RLS setup before implementing the gated vertical slice in `docs/superpowers/plans/2026-09-19-learning-vertical-slice.md`.
 
 ## Update template
 
