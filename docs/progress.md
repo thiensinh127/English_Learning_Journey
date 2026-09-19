@@ -39,6 +39,9 @@
 - P1-06 Task 1 moved to Review: added `.codex/config.toml` with project-root discovery only and ADR 0002 for quality automation, external integration, and model-routing boundaries.
 - P1-06 Task 1 verification: `codex exec -s read-only ...` listed `AGENTS.md`, `apps/web/AGENTS.md`, and the active backlog task without changing files; `git diff --check` passed.
 - Ruling: use `codex exec` for non-TTY instruction verification because the plan's interactive `codex --ask-for-approval` command refuses to start when `TERM=dumb`; this changes only the verification invocation, not project behavior.
+- P1-06 Task 2 started: `npm run check` was absent as expected; the package contract and nested web instructions are now being added.
+- P1-06 Task 2 moved to Review: added `npm run check` and scoped web-package rules for quality, e2e coverage, accessibility, Supabase boundaries, and content separation.
+- P1-06 Task 2 verification: from `apps/web`, `npm run check` passed with lint, typecheck, 5 test files/9 tests, and production build; Codex read the root and nested instructions in read-only mode.
 
 ## Update template
 
