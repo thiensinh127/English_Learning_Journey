@@ -7,12 +7,16 @@
    smallest safe change; move the task to `In Progress` before edits.
 3. Use `content-qc` for textbook-derived records and `student-flow-qa` for
    child-facing flows when their triggers apply.
-4. Make the smallest coherent change and keep content separate from UI.
-5. Run focused tests first, then `apps/web` quality checks and relevant
+4. Use `textbook-content-ingestion` for PDF/book-map extraction,
+   `textbook-media-ingestion` for explicit approved audio/image manifests,
+   `lesson-game-authoring` for deterministic activities, and
+   `textbook-coverage-qc` before publishing a Unit or review.
+5. Make the smallest coherent change and keep content separate from UI.
+6. Run focused tests first, then `apps/web` quality checks and relevant
    Playwright coverage.
-6. Record commands, evidence, assumptions, blockers, and the next action in
+7. Record commands, evidence, assumptions, blockers, and the next action in
    `docs/progress.md`; move the task to `Review` only after verification.
-7. Move to `Done` only after required external gates, including rights and live
+8. Move to `Done` only after required external gates, including rights and live
    RLS verification, are actually evidenced.
 
 Git hooks provide a fast local gate. GitHub Actions provides the complete web
