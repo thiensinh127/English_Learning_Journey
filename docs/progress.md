@@ -13,6 +13,9 @@
 - P0-02 verification: `npm run test -- src/features/content/schema.test.ts`, `npm run test`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
 - P2-02 navigation foundation completed pending review: added a schema-validated demo repository, responsive lesson list/detail routes, an accessible no-audio fallback, and a safe 404 response for missing lesson IDs. Demo content is visibly marked as not approved for study.
 - P2-02 verification: `npm run test`, `npm run test:e2e -- tests/e2e/lesson-navigation.spec.ts`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
+- P1-04 foundation implemented: added versioned content/progress tables, published-content and student-owned RLS policies, indexes for RLS access paths, validated public Supabase environment variables, browser/server client factories, and a non-secret environment example.
+- P1-04 application verification: `npm run test -- src/lib/env.test.ts`, `npm run test`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
+- P1-04 blocker: no Supabase CLI, `supabase/config.toml`, linked/local disposable project, or two authenticated test users are available. The migration and RLS verification query have not been executed against Postgres/Auth; no RLS claim is made yet.
 - Product direction agreed: content-first MVP with light gamification and controlled AI later.
 - Primary user agreed: grade 4 student self-study.
 - MVP learning target agreed: vocabulary and sentence patterns by textbook lesson.
@@ -25,8 +28,8 @@
 - Delivery timeline created: eight weeks part-time or five to six weeks full-time when pilot content is ready at kickoff.
 - Development-agent routing policy created: one main coordinator, at most two concurrent subagents, and model selection kept in user-level Codex configuration.
 - Execution autonomy agreed: continue approved-plan work without routine confirmations; log low-impact assumptions and stop only for material missing authority or inputs.
-- Current next action: establish Supabase migration and RLS boundaries (Foundation Task 5); P0-01 remains ready when the textbook is provided.
-- Blockers: exact textbook and content/media ownership details are not yet supplied.
+- Current next action: provision or link a disposable Supabase project, apply `0001_content_and_progress.sql`, and run the prepared two-user RLS verification query; P0-01 remains ready when the textbook is provided.
+- Blockers: exact textbook and content/media ownership details are not yet supplied; P1-04 also needs a disposable Supabase project/CLI configuration and two test-user identities for live RLS verification.
 
 ## Update template
 
