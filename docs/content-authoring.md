@@ -3,6 +3,16 @@
 This contract keeps approved Grade 4 textbook content separate from interface
 code. It applies to every lesson submitted for review.
 
+## Current source candidate
+
+The product owner identified the target source as **Tiếng Anh 4 Global
+Success**, Học liệu.VN e-book ID `3`:
+<https://hoclieu.vn/e-book/3?pageNumber=1>
+
+This source is currently a reference candidate only. Do not copy, ingest, or
+publish textbook pages, audio, or images until the allowed-use scope and source
+ownership are recorded in the review record below.
+
 ## Lesson data
 
 Each lesson must pass `lessonSchema` in

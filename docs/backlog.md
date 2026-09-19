@@ -4,7 +4,7 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 
 | ID | Priority | Task | Status | Depends on |
 |---|---|---|---|---|
-| P0-01 | P0 | Confirm textbook and content rights | Ready | — |
+| P0-01 | P0 | Confirm textbook and content rights | In Progress | — |
 | P0-02 | P0 | Define content schema and authoring format | Review | P0-01 |
 | P0-03 | P0 | Prepare pilot content | Backlog | P0-02 |
 | P1-01 | P0 | Initialize Next.js project | Review | — |
