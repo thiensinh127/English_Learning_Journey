@@ -54,6 +54,14 @@
 - Stop only when a required input cannot be safely inferred, including textbook content or ownership, external account access, production credentials, a payment commitment, or a decision that materially expands approved MVP scope.
 - When blocked, continue independent ready tasks and document the blocker rather than pausing the entire project.
 
+## Confirmation questions
+
+- Ask for confirmation only when a required external input, authority, or scope decision cannot be inferred safely.
+- Write confirmation questions in Vietnamese, using plain language. Define every technical term in the same question the first time it appears.
+- State the decision needed, why it matters, and the impact of waiting in one or two short sentences.
+- Offer two or three numbered options, put the recommended option first, and give each a short trade-off.
+- End with an explicit reply pattern such as `Chọn 1` or `Chọn 2 + <thông tin>`. Do not continue past a material decision without the user's selected option.
+
 ## Required checks before completion
 
 - Typecheck
