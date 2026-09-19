@@ -11,6 +11,8 @@
 - P1-02/P1-03 verification: `npm run test -- src/components/app-shell.test.tsx`, `npm run test`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
 - P0-02 completed pending review: added validated lesson, vocabulary, and sentence-pattern schemas plus the content authoring/review contract at `docs/content-authoring.md`.
 - P0-02 verification: `npm run test -- src/features/content/schema.test.ts`, `npm run test`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
+- P2-02 navigation foundation completed pending review: added a schema-validated demo repository, responsive lesson list/detail routes, an accessible no-audio fallback, and a safe 404 response for missing lesson IDs. Demo content is visibly marked as not approved for study.
+- P2-02 verification: `npm run test`, `npm run test:e2e -- tests/e2e/lesson-navigation.spec.ts`, `npm run lint`, `npm run typecheck`, and `npm run build` passed in `apps/web`.
 - Product direction agreed: content-first MVP with light gamification and controlled AI later.
 - Primary user agreed: grade 4 student self-study.
 - MVP learning target agreed: vocabulary and sentence patterns by textbook lesson.
@@ -23,7 +25,7 @@
 - Delivery timeline created: eight weeks part-time or five to six weeks full-time when pilot content is ready at kickoff.
 - Development-agent routing policy created: one main coordinator, at most two concurrent subagents, and model selection kept in user-level Codex configuration.
 - Execution autonomy agreed: continue approved-plan work without routine confirmations; log low-impact assumptions and stop only for material missing authority or inputs.
-- Current next action: build the typed fixture repository and lesson navigation foundation (Foundation Task 4); P0-01 remains ready when the textbook is provided.
+- Current next action: establish Supabase migration and RLS boundaries (Foundation Task 5); P0-01 remains ready when the textbook is provided.
 - Blockers: exact textbook and content/media ownership details are not yet supplied.
 
 ## Update template
