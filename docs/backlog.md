@@ -9,7 +9,7 @@ Status values: `Backlog`, `Ready`, `In Progress`, `Review`, `Done`, `Blocked`, `
 | P0-03 | P0 | Prepare pilot content | In Progress | P0-02 |
 | P1-01 | P0 | Initialize Next.js project | Review | — |
 | P1-02 | P0 | Establish quality tooling | Review | P1-01 |
-| P1-03 | P1 | Establish UI foundation | Review | P1-01 |
+| P1-03 | P1 | Establish UI foundation | Done | P1-01 |
 | P1-04 | P0 | Set up Supabase boundaries | Blocked | P1-01 |
 | P1-05 | P0 | Add project tracking workflow | Done | P1-01 |
 | P1-06 | P0 | Establish Codex workflow and quality gates | Done | P1-01 |

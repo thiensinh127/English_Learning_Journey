@@ -15,6 +15,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
   authentication changes.
 - Keep UI mobile-first, responsive, keyboard accessible, and compatible with
   the existing student self-study flow.
+- Read `docs/design-system.md` before creating or changing UI. Treat its
+  typography, semantic color tokens, touch-target sizes, responsive layouts,
+  and student/parent distinction as product requirements.
+- Use `font-display`, `font-sans`, and the `journey-*` color tokens from the
+  design system. Do not add ad-hoc colors, fonts, gradients, or tiny text to
+  student surfaces.
 - Never use a Supabase service-role key in browser or client modules.
 - Keep textbook data and content contracts in `src/features/content`; keep
   presentation components separate from content records.
