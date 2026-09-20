@@ -13,6 +13,7 @@
 - Performance and reliability standards agreed: Core Web Vitals, API p95 latency, on-demand media/data loading, idempotent progress writes, indexed RLS queries, and release monitoring.
 - Delivery timeline created: eight weeks part-time or five to six weeks full-time when pilot content is ready at kickoff.
 - Development-agent routing policy created: one main coordinator, at most two concurrent subagents, and model selection kept in user-level Codex configuration.
+- Git workflow updated: use one primary working directory, checkout a dedicated feature branch for each feature, then verify, commit, and push it; do not split feature work across worktrees.
 - Execution autonomy agreed: continue approved-plan work without routine confirmations; log low-impact assumptions and stop only for material missing authority or inputs.
 - Current next action: review the foundation and Codex workflow plans, select an execution approach, then begin P1-01; P0-01 can proceed in parallel when the textbook is provided.
 - Blockers: exact textbook and content/media ownership details are not yet supplied.

@@ -40,12 +40,20 @@
 
 ## Codex workflow
 
-1. Read the current task in `docs/backlog.md` and the latest `docs/progress.md`.
-2. Move the task to `In Progress` before changing code.
-3. Make the smallest coherent change.
-4. Run the task-specific tests and relevant full checks.
-5. Move the task to `Review` and record evidence.
-6. Only after verification, move it to `Done` and update the next action.
+1. Read the current feature or phase in `docs/backlog.md` and the latest `docs/progress.md`.
+2. Move the feature or phase to `In Progress` before changing code. Keep its small child tasks as working notes; do not require a separate status cycle for each one.
+3. Implement the smallest coherent end-to-end slice for the feature or phase, completing its ready child tasks before running the full verification suite.
+4. Use focused checks during implementation only when they are cheap or needed to investigate a failure, protect a risky change, or prevent loss of work. Do not run the full test suite after every small task.
+5. When the feature or phase is functionally complete, run the relevant test suite and required checks once as a verification batch; fix any failures and rerun the affected checks.
+6. Move the feature or phase to `Review` and record the batch verification evidence.
+7. Only after batch verification, move it to `Done` and update the next action.
+
+## Git workflow
+
+- Use the repository's primary working directory; do not create or split worktrees for feature work.
+- Start each feature by checking out a dedicated `feat/<feature-name>` branch from the intended base branch.
+- Keep all work for that feature on its branch. After the required verification batch passes, commit the completed change and push the branch to its configured remote.
+- Before deleting or replacing a worktree, inspect it for uncommitted work and preserve that work through a commit, patch, or an explicitly approved discard.
 
 ## Execution autonomy
 
@@ -54,8 +62,9 @@
 - Stop only when a required input cannot be safely inferred, including textbook content or ownership, external account access, production credentials, a payment commitment, or a decision that materially expands approved MVP scope.
 - When blocked, continue independent ready tasks and document the blocker rather than pausing the entire project.
 
-## Required checks before completion
+## Required checks before feature/phase completion
 
+- Run applicable checks as one batch at the end of a completed feature or phase, rather than after every child task.
 - Typecheck
 - Lint
 - Unit tests
